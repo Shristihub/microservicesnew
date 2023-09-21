@@ -1,0 +1,10 @@
+#datasource specific properties - t 
+
+spring:  data:    mongodb:      uri: mongodb://0.0.0.0:27017/trainingdb
+#       uri: mongodb://mongodb:27017/trial
+server:
+  port: 8081
+jwt:
+ secret: avekshaa
+
+    
