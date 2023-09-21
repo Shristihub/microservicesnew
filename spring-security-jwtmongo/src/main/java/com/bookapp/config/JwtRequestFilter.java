@@ -47,7 +47,6 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         // if the username is not null, check if it exists in the database
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
         	//check in db call the service method
-     	       
         	UserDetails userDetails = appUserServiceImpl.loadUserByUsername(username);
         	System.out.println(userDetails);
                 // validate the token

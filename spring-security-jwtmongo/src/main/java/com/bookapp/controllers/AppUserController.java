@@ -41,6 +41,7 @@ public class AppUserController {
 	@Autowired
     JwtTokenUtil tokenUtil;
 	
+	// 2nd call for the registered user (similar to login - this returns the jwt token)
 	@PostMapping("/authenticate")
 	public ResponseEntity<String> generateToken(@RequestBody AppUser appUser){
 		System.out.println(appUser);
@@ -49,7 +50,7 @@ public class AppUserController {
 		String token = tokenUtil.generateToken(userDetails);
 		return ResponseEntity.ok(token);
 	}
-
+    // 1st call for any new user 
 	@PostMapping("/register")
 	public ResponseEntity<Void> addUser(@RequestBody AppUser appUser) {
 		UserDetails userDetails = convertToUserDetails(appUser);

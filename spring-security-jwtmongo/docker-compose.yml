@@ -1,0 +1,25 @@
+version: "3" 
+services:
+  jwt-mongo-client:
+   image: security/jwtmongo:client
+   ports:
+    - "8086:8085"
+   depends_on:
+    - jwt-mongo-api
+   networks:
+    - jwt-mongonet 
+  jwt-mongo-api: 
+   ports: 
+    - "8082:8081"
+   build: .
+  
+   networks: 
+    - jwt-mongonet
+  mongodb:
+   image: mongo:latest
+   ports: 
+    - "27017:27017"
+   networks: 
+    - jwt-mongonet
+networks: 
+    jwt-mongonet: 
