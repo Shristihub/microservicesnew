@@ -1,0 +1,17 @@
+version: "3" 
+services: 
+  bookresponse-api: 
+   image: training/avrepo:bookrest
+   ports:
+    - "8092:8080"
+   build: .
+   networks: 
+    - book-mongonet
+  mongodb:
+   image: mongo:latest
+   ports: 
+    - "27018:27017"
+   networks: 
+    - book-mongonet
+networks: 
+    book-mongonet: 

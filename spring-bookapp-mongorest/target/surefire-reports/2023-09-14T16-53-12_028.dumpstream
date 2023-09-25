@@ -1,0 +1,5 @@
+# Created at 2023-09-14T16:53:12.283
+Boot Manifest-JAR contains absolute paths in classpath 'D:\2021\apps\stsexamples\springdemos23\spring-bookapp-mongorest\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
